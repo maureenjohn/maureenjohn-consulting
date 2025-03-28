@@ -1,0 +1,145 @@
+// Reset & Base Styles
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $base-font-size;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: 1rem;
+  line-height: $base-line-height;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  color: $text-color;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  
+  @media (max-width: $tablet) {
+    font-size: 2.5rem;
+  }
+  
+  @media (max-width: $mobile) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+  
+  @media (max-width: $tablet) {
+    font-size: 2rem;
+  }
+  
+  @media (max-width: $mobile) {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  
+  @media (max-width: $mobile) {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  color: $light-text-color;
+  
+  @media (max-width: $mobile) {
+    font-size: 1rem;
+  }
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all $transition-base;
+  
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+  
+  @media (max-width: $tablet) {
+    padding: 0 $spacing-unit / 2;
+  }
+}
+
+section {
+  padding: 80px 0;
+  
+  @media (max-width: $tablet) {
+    padding: 60px 0;
+  }
+  
+  @media (max-width: $mobile) {
+    padding: 40px 0;
+  }
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,126 @@
+---
+layout: default
+---
+
+<div class="home-page">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="reveal-text">Lorem ipsum dolor sit amet consectetur</h1>
+        <p class="reveal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque magna ut lacus interdum, at fermentum ipsum accumsan.</p>
+        <div class="button-group">
+          <a href="#" class="button primary">Request Demo</a>
+          <a href="#" class="button secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="gradient-blur"></div>
+        <img src="{{ '/assets/images/placeholder.jpg' | relative_url }}" alt="Hero Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="reveal-text">Our Platform Features</h2>
+        <p class="reveal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque magna.</p>
+      </div>
+      
+      <div class="feature-cards">
+        {% for i in (1..4) %}
+        <div class="feature-card reveal-card">
+          <div class="icon">
+            <div class="icon-circle"></div>
+          </div>
+          <h3>Feature {{ i }}</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque magna ut lacus interdum.</p>
+          <a href="#" class="learn-more">Learn more <span>→</span></a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="reveal-text">What Our Clients Say</h2>
+      </div>
+
+      <div class="swiper testimonials-slider">
+        <div class="swiper-wrapper">
+          {% for i in (1..5) %}
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="quote">"</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque magna ut lacus interdum, at fermentum ipsum accumsan.</p>
+              <div class="client">
+                <div class="client-image"></div>
+                <div class="client-info">
+                  <h4>Client Name</h4>
+                  <p>Position, Company</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Section -->
+  <section class="platform">
+    <div class="container">
+      <div class="platform-content">
+        <div class="section-header">
+          <h2 class="reveal-text">Our Platform</h2>
+          <p class="reveal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque magna ut lacus interdum.</p>
+        </div>
+        
+        <div class="platform-tabs">
+          <div class="tabs-nav">
+            {% for i in (1..4) %}
+            <button class="tab-button {% if forloop.first %}active{% endif %}" data-tab="{{ i }}">Tab {{ i }}</button>
+            {% endfor %}
+          </div>
+          
+          <div class="tabs-content">
+            {% for i in (1..4) %}
+            <div class="tab-panel {% if forloop.first %}active{% endif %}" data-tab="{{ i }}">
+              <div class="tab-image">
+                <div class="gradient-blur"></div>
+                <img src="{{ '/assets/images/placeholder.jpg' | relative_url }}" alt="Tab Image">
+              </div>
+              <div class="tab-description">
+                <h3>Tab {{ i }} Content</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque magna ut lacus interdum, at fermentum ipsum accumsan.</p>
+                <a href="#" class="button primary">Learn More</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="reveal-text">Ready to get started?</h2>
+        <p class="reveal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque magna ut lacus interdum.</p>
+        <div class="button-group">
+          <a href="#" class="button primary">Request Demo</a>
+          <a href="#" class="button secondary">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

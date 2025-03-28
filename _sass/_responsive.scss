@@ -1,0 +1,87 @@
+// Mobile and tablet styles
+@media (max-width: $tablet) {
+  .container {
+    padding: 0 $spacing-unit / 2;
+  }
+  
+  .hero {
+    .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .button-group {
+      justify-content: center;
+    }
+  }
+  
+  .features {
+    .feature-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .platform {
+    .tab-panel {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Mobile only styles
+@media (max-width: $mobile) {
+  .features {
+    .feature-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .hero {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large screens
+@media (min-width: $large-desktop) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+// Print styles
+@media print {
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+}
